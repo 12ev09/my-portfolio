@@ -3,18 +3,18 @@ import {
   AppBar,
   Toolbar,
   CssBaseline,
-  Typography,
   makeStyles,
   useTheme,
   useMediaQuery,
+  Button,
 } from "@material-ui/core";
 import { Link } from "react-router-dom";
-import DrawerComponent from "./Drawer";
+import MenuComponent from "./Menu";
 
 const useStyles = makeStyles((theme) => ({
   style: {
     background: 'dimgray',
-    height:'60px',
+    height: '60px',
     width: "100%"
   },
   navlinks: {
@@ -23,11 +23,16 @@ const useStyles = makeStyles((theme) => ({
   },
   link: {
     textDecoration: "none",
+    paddingLeft: theme.spacing(5),
+  },
+  button: {
     color: "white",
     fontSize: "20px",
-    paddingLeft: theme.spacing(5),
+    paddingLeft: theme.spacing(1),
+    paddingRight: theme.spacing(1),
     "&:hover": {
-      color :'orange'
+      color: 'orange',
+      backgroundColor:"white"
     },
   },
 }));
@@ -42,17 +47,17 @@ function Navbar() {
       <CssBaseline />
       <Toolbar>
         {isMobile ? (
-          <DrawerComponent />
+          <MenuComponent />
         ) : (
           <div className={classes.navlinks}>
             <Link to="/" className={classes.link}>
-              Home
+              <Button variant="text" className={classes.button}>Home</Button>
             </Link>
             <Link to="/about" className={classes.link}>
-              About
+              <Button variant="text" className={classes.button}>About</Button>
             </Link>
             <Link to="/skill" className={classes.link}>
-              Skill
+              <Button variant="text" className={classes.button}>Skill</Button>
             </Link>
           </div>
         )}
