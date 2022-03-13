@@ -1,31 +1,46 @@
-import React ,{ useEffect, useRef } from 'react';
+import React  from 'react';
 import ITyped from 'react-ityped';
 import "../assets/home.scss";
-import {
-  Grid,
-  makeStyles,
-} from '@material-ui/core';
+import {makeStyles} from '@material-ui/core';
+import background from '../img/background.png'
 
 const useStyle = makeStyles(() => ({
     body: {
         paddingTop:'300px',
-        height:'700px'
+        height:'700px',
+        backgroundImage: `url(${background})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center-center',
     },
     main: {
     margin: "auto",
-    fontSize:33,
+    fontSize:50,
     fontFamily:'MS Pゴシック',
     textAlign:'center',
-  }
+ }
 }))
+
+const Chapter = (props) =>{
+    const classes = useStyle();
+    const {text,delay} = props;
+    return (
+        <ITyped className={classes.main}
+        showCursor={false}
+        strings={text}
+        typeSpeed={50}
+        startDelay={delay}
+        disableBackTyping={true}
+        />
+    )
+}
 
 function Home() {
     const classes = useStyle();
     return (
         <div className={classes.body}>
-            <br ></br>
-            <p className={classes.main}> Hello !!</p>
-            <p className={classes.main}> This is Takumi's Portforio Page </p> 
+        <Chapter  text={['Hello']} delay={0}/>
+        <Chapter  text={["This is Takumi's Portforio Page."]} delay={1200}/>
         </div>
     );
 }
