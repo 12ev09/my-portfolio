@@ -13,24 +13,21 @@ import DrawerComponent from "./Drawer";
 
 const useStyles = makeStyles((theme) => ({
   style: {
-    background: '#2E3B55',
+    background: 'dimgray',
+    height:'60px',
+    width: "100%"
   },
   navlinks: {
-    marginLeft: theme.spacing(5),
+    paddingLeft: theme.spacing(2),
     display: "flex",
-  },
-  logo: {
-    flexGrow: "2",
-    cursor: "pointer",
   },
   link: {
     textDecoration: "none",
     color: "white",
     fontSize: "20px",
-    marginLeft: theme.spacing(20),
+    paddingLeft: theme.spacing(5),
     "&:hover": {
-      color: "yellow",
-      borderBottom: "1px solid white",
+      color :'orange'
     },
   },
 }));
@@ -38,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
 function Navbar() {
   const classes = useStyles();
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"))
+  const isMobile = useMediaQuery(theme.breakpoints.down("xs"))
 
   return (
     <AppBar position="static" className={classes.style}>

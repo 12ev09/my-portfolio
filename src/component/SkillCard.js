@@ -12,13 +12,11 @@ import "../assets/skill.scss";
 
 const useStyles = makeStyles({
   card: {
-    width: 300,
-    height: 400,
+    border:'1px solid black',
+    background:'white',
+    width: 350,
+    height: 350,
     mergin: Autocomplete,
-  },
-  media: {
-    width: 200,
-    height: 200,
   },
   title: {
     fontSize: 20,

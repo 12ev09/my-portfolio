@@ -1,12 +1,19 @@
 import React from "react";
 import {
-  Grid, 
+  Grid,
   makeStyles,
 } from '@material-ui/core';
 import SkillCard from "./SkillCard";
+import { motion, AnimatePresence } from "framer-motion";
 
-const useStyle = makeStyles(()=>({
-  grid:{
+const useStyle = makeStyles(() => ({
+  body :{
+    background:'snow',
+    paddingTop:'10px',
+    paddingRight:'100px',
+    marginBottom:'20px'
+  },
+  grid: {
     margin: "auto",
   }
 }))
@@ -54,18 +61,25 @@ function Skills() {
 
   const getCardContent = (getObj) => {
     return (
-      <Grid item xs={12} md={4} className={classes.grid}>
+      <Grid item xs={12} sm={6} md={4} className={classes.grid}>
         <SkillCard {...getObj} />
       </Grid>
     );
   };
 
   return (
-    <div>
+    <div className={classes.body}>
       <br></br>
-      <Grid container spacing={4} alignItems="center">
-        {skills.map((contentObj) => getCardContent(contentObj))}
-      </Grid>
+      <AnimatePresence>
+        <motion.div
+          initial={{ x: -100 }}
+          animate={{ x: 100 }}
+        >
+          <Grid container spacing={4} alignItems="center">
+            {skills.map((contentObj) => getCardContent(contentObj))}
+          </Grid>
+        </motion.div>
+      </AnimatePresence>
     </div>
   );
 }
