@@ -4,7 +4,7 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 
 const useStyles = makeStyles({
     footer: {
-        backgroundColor: "dimgray",
+        backgroundColor: "palegreen",
         height: '60px',
         width: "100%",
         bottom: 0,
@@ -18,7 +18,7 @@ const Footer = () => {
     return (
         <div className={classes.footer}>
             <GitHubIcon
-                style={{ color: 'white' }}
+                style={{ color: 'black' }}
                 className={classes.icon}
                 onClick={() => window.open("https://github.com/12ev09", "_blank")}
             />

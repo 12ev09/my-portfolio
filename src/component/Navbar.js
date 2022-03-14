@@ -8,31 +8,30 @@ import {
   useMediaQuery,
   Button,
 } from "@material-ui/core";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import MenuComponent from "./Menu";
 
 const useStyles = makeStyles((theme) => ({
   style: {
-    background: 'dimgray',
+    background: 'palegreen',
     height: '60px',
     width: "100%"
   },
   navlinks: {
-    paddingLeft: theme.spacing(2),
     display: "flex",
   },
   link: {
     textDecoration: "none",
-    paddingLeft: theme.spacing(5),
-  },
-  button: {
-    color: "white",
-    fontSize: "20px",
-    paddingLeft: theme.spacing(1),
-    paddingRight: theme.spacing(1),
+    paddingLeft: theme.spacing(2),
+    paddingRight: theme.spacing(2),
+    display: 'block',
+    color:'white',
+    fontSize:'30px',
+    fontFamily:'Comic Sans MS',
     "&:hover": {
-      color: 'orange',
-      backgroundColor:"white"
+      background: 'white',
+      color:'palegreen',
+      borderRadius: '8px',
     },
   },
 }));
@@ -49,17 +48,17 @@ function Navbar() {
         {isMobile ? (
           <MenuComponent />
         ) : (
-          <div className={classes.navlinks}>
-            <Link to="/" className={classes.link}>
-              <Button variant="text" className={classes.button}>Home</Button>
-            </Link>
-            <Link to="/about" className={classes.link}>
-              <Button variant="text" className={classes.button}>About</Button>
-            </Link>
-            <Link to="/skill" className={classes.link}>
-              <Button variant="text" className={classes.button}>Skill</Button>
-            </Link>
-          </div>
+          <nav className={classes.navlinks}>
+            <NavLink to="/" className={classes.link} end>
+              Home
+            </NavLink>
+            <NavLink to="/about" className={classes.link}>
+              About
+            </NavLink>
+            <NavLink to="/skill" className={classes.link} end>
+              Skill
+            </NavLink>
+          </nav>
         )}
       </Toolbar>
     </AppBar>

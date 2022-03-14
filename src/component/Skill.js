@@ -8,10 +8,10 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const useStyle = makeStyles(() => ({
   body :{
-    background:'snow',
-    paddingTop:'10px',
-    paddingRight:'100px',
-    marginBottom:'20px'
+    background:'white',
+    paddingTop:'30px',
+    paddingBottom:'30px',
+    paddingLeft:'35px',
   },
   grid: {
     margin: "auto",
@@ -37,14 +37,14 @@ const skills = [
     title: "Java",
     icon: "devicon-java-plain colored",
     star: 2,
-    comment: "大学の講義で使用．ほぼ覚えていない．",
+    comment: "大学の講義で使用.",
     history: "null"
   },
   {
     title: "C",
     icon: "devicon-c-plain colored",
     star: 2,
-    comment: "大学の講義で使用．",
+    comment: "大学の講義で使用．競技プログラミングで稀に使う.",
     history: "null",
   },
   {
@@ -69,17 +69,9 @@ function Skills() {
 
   return (
     <div className={classes.body}>
-      <br></br>
-      <AnimatePresence>
-        <motion.div
-          initial={{ x: -100 }}
-          animate={{ x: 100 }}
-        >
-          <Grid container spacing={4} alignItems="center">
+          <Grid container spacing={8} alignItems="center">
             {skills.map((contentObj) => getCardContent(contentObj))}
           </Grid>
-        </motion.div>
-      </AnimatePresence>
     </div>
   );
 }

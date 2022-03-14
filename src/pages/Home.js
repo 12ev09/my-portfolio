@@ -16,7 +16,7 @@ const useStyle = makeStyles(() => ({
     main: {
     margin: "auto",
     fontSize:50,
-    fontFamily:'MS Pゴシック',
+    fontFamily:'Comic Sans MS',
     textAlign:'center',
  }
 }))
@@ -39,8 +39,8 @@ function Home() {
     const classes = useStyle();
     return (
         <div className={classes.body}>
-        <Chapter  text={['Hello']} delay={0}/>
-        <Chapter  text={["This is Takumi's Portforio Page."]} delay={1200}/>
+        <Chapter  text={['Hello']} delay={1000}/>
+        <Chapter  text={["This is Takumi's Portforio Page."]} delay={2200}/>
         </div>
     );
 }

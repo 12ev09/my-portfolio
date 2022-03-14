@@ -12,15 +12,26 @@ import "../assets/skill.scss";
 
 const useStyles = makeStyles({
   card: {
-    border:'1px solid black',
+    border:'3px solid black',
     background:'white',
-    width: 350,
-    height: 350,
-    mergin: Autocomplete,
+    borderRadius: '8px',
+    width: '300px',
+    height: '350px',
+    "&:hover": {
+      background: 'whitesmoke',
+    },
   },
   title: {
     fontSize: 20,
+    fontFamily:'Comic Sans MS',
+    textAlign:'center'
   },
+  star:{
+    paddingLeft:'70px',
+  },
+  explation:{
+    fontSize:15,
+  }
 });
 
 function SkillCard(props) {
@@ -31,14 +42,14 @@ function SkillCard(props) {
     <Card variant="outlined" className={classes.card} alignItems="center" justify="center">
       <CardContent>
         <p className={icon+" skillIcon"}></p>
-        <Typography className={classes.title} variant="body2">
+        <Typography className={classes.title}>
           {title}
         </Typography>
         <hr />
-        <Rating readOnly value={star} />
-        <Typography variant="body2">{comment}</Typography>
+        <Rating readOnly value={star} className={classes.star}/>
+        <Typography variant="body2" className={classes.explation}>{comment}</Typography>
         <hr />
-        <Typography variant="body3">使用歴:{history}</Typography>
+        <Typography variant="body2" className={classes.explation}>使用歴:{history}</Typography>
       </CardContent>
     </Card>
   );

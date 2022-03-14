@@ -18,7 +18,8 @@ const useStyles = makeStyles(() => ({
         margin: '0 0 0 auto'
     },
     menuItem: {
-        backgroundColor: 'white'
+        backgroundColor: 'white',
+        fontFamily:'Comic Sans MS',
     }
 }));
 
@@ -60,7 +61,7 @@ function MenuComponent() {
                 </MenuItem >
             </Menu>
             <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 20 }} className={classes.button} >
-                <MenuOutlined onClick={handleClick} />
+                <MenuOutlined onClick={handleClick} style={{color:'white'}}/>
             </IconButton>
         </>
     );
