@@ -39,12 +39,12 @@ const useStyle = makeStyles(() => ({
 }))
 
 const ProductCard = (props) => {
-    const { title, img, comment, skill, reflection } = props;
+    const { title, img,alt, comment, skill, reflection } = props;
     const classes = useStyle();
 
     return (
         <Card variant="outlined" className={classes.card} alignItems="center" justify="center">
-            <img className={classes.img} src={img} />
+            <img className={classes.img} src={img} alt={alt}/>
             <CardContent>
                 <Typography className={classes.title}>{title}</Typography>
                 <hr className={classes.line}></hr>
@@ -71,6 +71,7 @@ const products = [
     {
         title: "LINE botで使える家計簿アプリ",
         img: "/static/images/products/kakeibo.png",
+        alt:"家計簿アプリ",
         comment: "LINE上の入力をスプレッドシートに記録することに加えて、月々の出費を出費のカテゴリ、支払い方法ごとに集計できる。",
         skill: "Python(Flask)、line-bot-sdk-python、GCP(SpreadSheet)、Heroku",
         reflection: "対話型の実装が難しくて断念してしまった。対話型の実装ができれば、ユーザーの入力がより簡単になる。",
@@ -78,6 +79,7 @@ const products = [
     {
         title: "ポートフォリオサイト",
         img: "/static/images/products/portforio.png",
+        alt:"ポートフォリオ",
         comment: "Reactの練習兼、自己紹介のために作成。今後に増えるProductやSkillのカードは既存の配列に書き足すことで容易に追加できるため編集がしやすい",
         skill: "JavaScript(React)、material-ui、react-router-dom、react-slider-dom、react-ityped",
         reflection: "CSSの知識が特に足りていなく、ブラウザのサイズの変化に完璧に対応できていなかった。また、連絡用のフォームやBlogを追加したい",
