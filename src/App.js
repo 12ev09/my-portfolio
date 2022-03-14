@@ -4,7 +4,7 @@ import RouterComponent from "./component/Router";
 
 function App() {
   return (
-      <Router basename="/my-portfolio">
+      <Router basename="/my-portforio/">
         <RouterComponent />
       </Router>
 )
