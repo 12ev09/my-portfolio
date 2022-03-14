@@ -34,7 +34,7 @@ const useStyles = makeStyles({
   }
 });
 
-function SkillCard(props) {
+const SkillCard = (props)=> {
   const { title, icon, star, comment,history } = props;
   const classes = useStyles();
 

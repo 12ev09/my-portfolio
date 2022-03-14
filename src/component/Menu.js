@@ -23,7 +23,7 @@ const useStyles = makeStyles(() => ({
     }
 }));
 
-function MenuComponent() {
+const MenuComponent = ()=> {
     const classes = useStyles();
 
     const [anchorEl, setAnchorEl] = React.useState(null);

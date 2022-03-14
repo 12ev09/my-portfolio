@@ -8,7 +8,7 @@ const useStyle = makeStyles(() => ({
     },
 }))
 
-function About() {
+const About = () => {
     const classes = useStyle()
     return (
         <div className={classes.body}>

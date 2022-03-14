@@ -4,7 +4,7 @@ import {
 } from '@material-ui/core';
 import avatar from '../img/avatar.jpg';
 
-function Profile() {
+const Profile = () => {
     return (
         <div>
             <Grid container>

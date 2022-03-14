@@ -56,7 +56,7 @@ const skills = [
   },
 ];
 
-function Skills() {
+const Skills = () => {
   const classes = useStyle();
 
   const getCardContent = (getObj) => {

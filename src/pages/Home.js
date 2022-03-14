@@ -39,7 +39,7 @@ function Home() {
     const classes = useStyle();
     return (
         <div className={classes.body}>
-        <Chapter  text={['Hello']} delay={1000}/>
+        <Chapter  text={['Hello!']} delay={1000}/>
         <Chapter  text={["This is Takumi's Portforio Page."]} delay={2200}/>
         </div>
     );

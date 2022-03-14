@@ -12,7 +12,7 @@ import Product from "../pages/Product"
 import Footer from "./Footer";
 
 
-function RouterComponent() {
+const RouterComponent =() => {
     const location = useLocation();
     return (
         <div>
