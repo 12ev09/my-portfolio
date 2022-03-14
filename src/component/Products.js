@@ -6,6 +6,8 @@ import {
     Typography,
     Grid
 } from '@material-ui/core';
+import kakeibo from '../img/kakeibo.png';
+import portforio from '../img/portforio.png';
 
 const useStyle = makeStyles(() => ({
     body: {
@@ -70,7 +72,7 @@ const ProductCard = (props) => {
 const products = [
     {
         title: "LINE botで使える家計簿アプリ",
-        img: "/static/images/products/kakeibo.png",
+        img: kakeibo,
         alt:"家計簿アプリ",
         comment: "LINE上の入力をスプレッドシートに記録することに加えて、月々の出費を出費のカテゴリ、支払い方法ごとに集計できる。",
         skill: "Python(Flask)、line-bot-sdk-python、GCP(SpreadSheet)、Heroku",
@@ -78,7 +80,7 @@ const products = [
     },
     {
         title: "ポートフォリオサイト",
-        img: "/static/images/products/portforio.png",
+        img: portforio,
         alt:"ポートフォリオ",
         comment: "Reactの練習兼、自己紹介のために作成。今後に増えるProductやSkillのカードは既存の配列に書き足すことで容易に追加できるため編集がしやすい",
         skill: "JavaScript(React)、material-ui、react-router-dom、react-slider-dom、react-ityped",
