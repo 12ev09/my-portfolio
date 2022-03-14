@@ -59,6 +59,11 @@ function MenuComponent() {
                     &nbsp;&nbsp;
                     <Link to="/skill" className={classes.link}>Skill</Link>
                 </MenuItem >
+                <MenuItem className={classes.menuItem}>
+                    <ThumbUpAltOutlined style={{ color: 'orange' }}/>
+                    &nbsp;&nbsp;
+                    <Link to="/product" className={classes.link}>Product</Link>
+                </MenuItem >
             </Menu>
             <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 20 }} className={classes.button} >
                 <MenuOutlined onClick={handleClick} style={{color:'white'}}/>

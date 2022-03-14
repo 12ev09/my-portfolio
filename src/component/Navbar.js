@@ -10,6 +10,7 @@ import {
 } from "@material-ui/core";
 import { NavLink } from "react-router-dom";
 import MenuComponent from "./Menu";
+//import "../assets/menu.scss";
 
 const useStyles = makeStyles((theme) => ({
   style: {
@@ -28,10 +29,11 @@ const useStyles = makeStyles((theme) => ({
     color:'white',
     fontSize:'30px',
     fontFamily:'Comic Sans MS',
-    "&:hover": {
+    "&:active": {
       background: 'white',
       color:'palegreen',
       borderRadius: '8px',
+      fontWeight: 500,
     },
   },
 }));
@@ -57,6 +59,9 @@ function Navbar() {
             </NavLink>
             <NavLink to="/skill" className={classes.link} end>
               Skill
+            </NavLink>
+            <NavLink to="/product" className={classes.link} end>
+              Product
             </NavLink>
           </nav>
         )}
