@@ -4,7 +4,6 @@ import {
   makeStyles,
 } from '@material-ui/core';
 import SkillCard from "./SkillCard";
-import { motion, AnimatePresence } from "framer-motion";
 
 const useStyle = makeStyles(() => ({
   body :{

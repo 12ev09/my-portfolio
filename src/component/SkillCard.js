@@ -2,12 +2,10 @@ import React from "react";
 import {
   Card,
   CardContent,
-  CardMedia,
   makeStyles,
   Typography,
 } from '@material-ui/core';
 import Rating from '@material-ui/lab/Rating';
-import { Autocomplete } from "@material-ui/lab";
 import "../assets/skill.scss";
 
 const useStyles = makeStyles({

@@ -1,4 +1,3 @@
-import React, { useCallback } from "react";
 import {
   AppBar,
   Toolbar,
@@ -6,11 +5,9 @@ import {
   makeStyles,
   useTheme,
   useMediaQuery,
-  Button,
 } from "@material-ui/core";
 import { NavLink } from "react-router-dom";
 import MenuComponent from "./Menu";
-//import "../assets/menu.scss";
 
 const useStyles = makeStyles((theme) => ({
   style: {
