@@ -1,18 +1,18 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core';
+import Profile from '../component/Profile';
 
 const useStyle = makeStyles(() => ({
     body: {
-        height: '700px'
-    }
+        height:'1000px',
+    },
 }))
 
 function About() {
-    const classes = useStyle();
-
+    const classes = useStyle()
     return (
         <div className={classes.body}>
-            Here is About page.
+            <Profile />
         </div>
     )
 }
