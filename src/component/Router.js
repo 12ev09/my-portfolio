@@ -10,12 +10,12 @@ import About from "../pages/About";
 import Skill from "../pages/Skill";
 import Product from "../pages/Product"
 import Footer from "./Footer";
-
+import "../assets/router.scss";
 
 const RouterComponent =() => {
     const location = useLocation();
     return (
-        <div>
+        <div id="wrapper">
             <Navbar />
             <SlideRoutes
                 location={location}

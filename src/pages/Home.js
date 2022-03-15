@@ -7,7 +7,7 @@ import background from '../img/background.png'
 const useStyle = makeStyles(() => ({
     body: {
         paddingTop:'300px',
-        height:'700px',
+        height:'100vh',
         backgroundImage: `url(${background})`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
