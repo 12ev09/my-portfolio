@@ -4,19 +4,19 @@ import {
     useLocation,
 } from "react-router-dom";
 import SlideRoutes from 'react-slide-routes';
-import Navbar from "./Navbar";
+import Header from "./Header";
 import Home from "../pages/Home";
 import About from "../pages/About";
 import Skill from "../pages/Skill";
 import Product from "../pages/Product"
 import Footer from "./Footer";
-
+import "../assets/router.scss";
 
 const RouterComponent =() => {
     const location = useLocation();
     return (
-        <div>
-            <Navbar />
+        <div id="wrapper">
+            <Header />
             <SlideRoutes
                 location={location}
                 duration={300}

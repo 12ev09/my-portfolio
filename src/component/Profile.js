@@ -11,7 +11,7 @@ const Profile = () => {
                 <Grid
                     item xs={12} sm={6} md={6}
                     style={{
-                        paddingLeft: '150px',
+                        paddingLeft: '70px',
                         paddingTop: '50px',
                     }}
                 >
@@ -28,7 +28,7 @@ const Profile = () => {
                 <Grid
                     item xs={12} sm={12} md={6}
                     style={{
-                        paddingLeft: '50px',
+                        paddingLeft: '10px',
                         paddingTop: '50px',
                     }}
                 >
@@ -51,7 +51,7 @@ const Profile = () => {
                 <Grid
                     item xs={12} sm={12} md={6}
                     style={{
-                        paddingLeft: '50px',
+                        paddingLeft: '10px',
                     }}
                 >
                     <h2>所属</h2>
@@ -74,7 +74,7 @@ const Profile = () => {
                 <Grid
                     item xs={12} sm={12} md={6}
                     style={{
-                        paddingLeft: '50px',
+                        paddingLeft: '10px',
                     }}
                 >
                     <h2>趣味</h2>

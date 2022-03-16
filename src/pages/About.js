@@ -4,7 +4,7 @@ import Profile from '../component/Profile';
 
 const useStyle = makeStyles(() => ({
     body: {
-        height:'1000px',
+        height:'150vh',
     },
 }))
 

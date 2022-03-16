@@ -9,7 +9,8 @@ const useStyles = makeStyles({
         width: "100%",
         bottom: 0,
         paddingTop:'20px',
-        textAlign:'center'
+        textAlign:'center',
+        marginTop:'auto'
     },
 });
 

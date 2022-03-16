@@ -4,9 +4,9 @@ import RouterComponent from "./component/Router";
 
 function App() {
   return (
-      <Router basename="/my-portfolio/">
-        <RouterComponent />
-      </Router>
-)
+    <Router basename="/my-portfolio/">
+      <RouterComponent />
+    </Router>
+  )
 }
 export default App;
