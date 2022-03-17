@@ -15,6 +15,7 @@ const useStyles = makeStyles({
     borderRadius: '8px',
     width: '300px',
     height: '350px',
+    merginRight:'auto',
     "&:hover": {
       background: 'whitesmoke',
     },
