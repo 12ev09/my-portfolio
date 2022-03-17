@@ -6,11 +6,13 @@ import {
 import SkillCard from "./SkillCard";
 
 const useStyle = makeStyles(() => ({
-  body :{
-    background:'white',
-    paddingTop:'30px',
-    paddingBottom:'30px',
-    paddingLeft:'35px',
+  body: {
+    paddingTop: '20px',
+    paddingBottom: '20px',
+  },
+  container: {
+    margin: "0px 40px 0px 40px",
+    paddingBottom: "30px"
   },
   grid: {
     margin: "auto",
@@ -68,9 +70,11 @@ const Skills = () => {
 
   return (
     <div className={classes.body}>
-          <Grid container spacing={8} alignItems="center">
-            {skills.map((contentObj) => getCardContent(contentObj))}
-          </Grid>
+      <div className={classes.container}>
+        <Grid container spacing={8} alignItems="center">
+          {skills.map((contentObj) => getCardContent(contentObj))}
+        </Grid>
+      </div>
     </div>
   );
 }
