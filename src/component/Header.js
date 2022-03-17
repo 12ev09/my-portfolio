@@ -20,6 +20,7 @@ const useStyles = makeStyles(() => ({
   },
   tab: {
     fontSize:'25px',
+    fontFamily:'Comic Sans MS',
     color:'white',
     },
 }));
